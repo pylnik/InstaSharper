@@ -465,5 +465,10 @@ namespace InstaSharper.API.Processors
                 return Result.Success(instaUserListResponse);
             return Result.UnExpectedResponse<InstaUserListShortResponse>(response, json);
         }
+
+        public async Task<IResult<InstaFriendshipStatus>> RemoveFollowerAsync(long userId)
+        {
+            return await BlockUnblockUserInternal(userId, UriCreator.GetRemoveFollowerUri(userId));
+        }
     }
 }

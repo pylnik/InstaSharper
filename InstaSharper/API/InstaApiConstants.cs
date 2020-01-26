@@ -109,6 +109,7 @@ namespace InstaSharper.API
         public const string UNFOLLOW_USER = API_SUFFIX + "/friendships/destroy/{0}/";
         public const string BLOCK_USER = API_SUFFIX + "/friendships/block/{0}/";
         public const string UNBLOCK_USER = API_SUFFIX + "/friendships/unblock/{0}/";
+        public const string REMOVE_FOLLOWER = API_SUFFIX + "/friendships/remove_follower/{0}/";        
         public const string SET_ACCOUNT_PRIVATE = API_SUFFIX + "/accounts/set_private/";
         public const string SET_ACCOUNT_PUBLIC = API_SUFFIX + "/accounts/set_public/";
         public const string POST_COMMENT = API_SUFFIX + "/media/{0}/comment/";

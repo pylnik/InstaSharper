@@ -33,8 +33,8 @@ namespace InstaSharper.Examples
                 // create user session data and provide login details
                 var userSession = new UserSessionData
                 {
-                    UserName = "username",
-                    Password = "password"
+                    UserName = "alexey.bevetskiy",
+                    Password = "insta123!"
                 };
 
                 var delay = RequestDelay.FromSeconds(2, 2);
@@ -96,7 +96,7 @@ namespace InstaSharper.Examples
                 Console.WriteLine("Press 6 to start messaging demo sample");
                 Console.WriteLine("Press 7 to start location demo sample");
                 Console.WriteLine("Press 8 to start collections demo sample");
-                Console.WriteLine("Press 9 to start upload video demo sample");
+                Console.WriteLine("Press 9 to delete follower");
 
                 var samplesMap = new Dictionary<ConsoleKey, IDemoSample>
                 {
@@ -108,7 +108,7 @@ namespace InstaSharper.Examples
                     [ConsoleKey.D6] = new Messaging(_instaApi),
                     [ConsoleKey.D7] = new LocationSample(_instaApi),
                     [ConsoleKey.D8] = new CollectionSample(_instaApi),
-                    [ConsoleKey.D9] = new UploadVideo(_instaApi)
+                    [ConsoleKey.D9] = new Deleting(_instaApi)
 
 
                 };

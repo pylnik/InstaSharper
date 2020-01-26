@@ -338,7 +338,7 @@ namespace InstaSharper.Helpers
                 throw new Exception("Cant create URI for getting media likers");
             return instaUri;
         }
-
+        
         public static Uri GetUnBlockUserUri(long userId)
         {
             if (!Uri.TryCreate(BaseInstagramUri, string.Format(InstaApiConstants.UNBLOCK_USER, userId),
@@ -347,6 +347,13 @@ namespace InstaSharper.Helpers
             return instaUri;
         }
 
+        public static Uri GetRemoveFollowerUri(long userId)
+        {
+            if (!Uri.TryCreate(BaseInstagramUri, string.Format(InstaApiConstants.REMOVE_FOLLOWER, userId),
+                out var instaUri))
+                throw new Exception("Cant create URI for REMOVE_FOLLOWER");
+            return instaUri;
+        }
 
         public static Uri GetUriSetAccountPrivate()
         {

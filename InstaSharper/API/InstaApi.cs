@@ -1372,6 +1372,11 @@ namespace InstaSharper.API
             _logger?.LogException(exception);
         }
 
+        public async Task<IResult<InstaFriendshipStatus>> RemoveFollowerAsync(long userId)
+        {
+            return await _userProcessor.RemoveFollowerAsync(userId);
+        }
+
         #endregion
     }
 }
